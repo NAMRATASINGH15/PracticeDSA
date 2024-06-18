@@ -2,11 +2,17 @@ import java.util.Scanner;
 
 public class RotateArrayByKTimes {
 
+    //TODO: Write the program using brute force approach
     public static void rotateArray(int[] arr, int k) {
         /*
             arr[7] = {3, -2, 1, 4, 6, 9, 8}, k = 3
             O/P: arr[7] = {6, 9, 8, 3, -2, 1, 4}
         */
+
+        if (arr.length == 0) {
+            return;
+        }
+
         while (k > 0) {
             int temp = arr[arr.length-1];
 
@@ -20,7 +26,6 @@ public class RotateArrayByKTimes {
     }
 
     public static void main(String[] args) {
-        //TODO: Write the program using brute force approach
 
         Scanner scn = new Scanner(System.in);
         int k = scn.nextInt();
@@ -31,6 +36,7 @@ public class RotateArrayByKTimes {
             arr[i] = scn.nextInt();
         }
 
+        //BruteForce approach
         rotateArray(arr, k);
 
         for (int i = 0; i < arr.length; i++) {
