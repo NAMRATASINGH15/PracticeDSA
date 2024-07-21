@@ -22,7 +22,7 @@ public class StringInsertDifference {
         }
 
         ans += str.charAt(str.length()-1);
-
+        //return answer
         return ans;
     }
 }
